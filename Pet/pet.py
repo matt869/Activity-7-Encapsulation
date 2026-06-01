@@ -20,9 +20,17 @@ class Pet:
         """Set the pet's age."""
         self.__age = age
 
-    def get_name(self): return self.__name
-    def get_animal_type(self): return self.__animal_type
-    def get_age(self): return self.__age
+    def get_name(self): 
+        """Get the pet's name."""
+        return self.__name
+    
+    def get_animal_type(self): 
+        """Get the pet's animal type."""
+        return self.__animal_type
+    
+    def get_age(self): 
+        """Get the pet's age."""
+        return self.__age
 
 # --- Test Program ---
 def main():
