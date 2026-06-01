@@ -117,9 +117,11 @@ def main():
     fan2.set_color("blue")
     fan2.set_on(False)
 
+    # Display fan 1 status information
     print(f"\n{YELLOW}[FAN 1 STATUS]{RESET}")
     print(f"Speed:  {fan1.get_speed()} (FAST)\nRadius: {fan1.get_radius()}\nColor:  {fan1.get_color()}\nPower:  {'ON' if fan1.get_on() else 'OFF'}")
 
+    # Display fan 2 status information
     print(f"\n{GREEN}[FAN 2 STATUS]{RESET}")
     print(f"Speed:  {fan2.get_speed()} (MEDIUM)\nRadius: {fan2.get_radius()}\nColor:  {fan2.get_color()}\nPower:  {'ON' if fan2.get_on() else 'OFF'}\n")
 
