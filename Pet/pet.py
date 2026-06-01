@@ -1,4 +1,8 @@
 class Pet:
+    """
+    A class to represent a pet with encapsulated attributes.
+    Stores pet information: name, animal type, and age.
+    """
     def __init__(self):
         self.__name = ""
         self.__animal_type = ""
