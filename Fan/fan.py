@@ -68,12 +68,14 @@ def main():
     print("\033[96m--- Vehicle Telemetry Initiated ---\033[0m\n")
     my_car = Car(2025, "Porsche 911 GT3 RS")
     
+    # Acceleration phase - increase speed 5 times
     for _ in range(5):
         my_car.accelerate()
         display_dashboard("Accelerating", my_car.get_speed())
         
     print("-" * 40)
     
+    # Braking phase - decrease speed 5 times
     for _ in range(5):
         my_car.brake()
         display_dashboard("Braking", my_car.get_speed())
