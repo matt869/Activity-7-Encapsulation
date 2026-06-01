@@ -83,6 +83,15 @@ class Fan:
         """Validate if speed is one of the allowed constants."""
         return speed in [self.SLOW, self.MEDIUM, self.FAST]
 
+    def get_air_flow(self):
+        """Calculate estimated air flow based on speed and radius."""
+        return self.__speed * self.__radius if self.__on else 0
+
+    def increase_speed(self):
+        """Increase fan speed by one level."""
+        if self.__speed < self.FAST:
+            self.__speed += 1
+
 # --- Test Program ---
 def main():
     CYAN, GREEN, YELLOW, RESET = '\033[96m', '\033[92m', '\033[93m', '\033[0m'
