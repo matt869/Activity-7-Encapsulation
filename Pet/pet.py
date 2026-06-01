@@ -32,7 +32,9 @@ class Pet:
         """Get the pet's age."""
         return self.__age
 
-# --- Test Program ---
+    def __str__(self):
+        """Return a formatted string representation of the pet."""
+        return f"Pet(name={self.__name}, type={self.__animal_type}, age={self.__age})"
 def main():
     CYAN, GREEN, RESET = '\033[96m', '\033[92m', '\033[0m'
     print(f"{CYAN}=== Central Pet Registration System ==={RESET}\n")
