@@ -47,6 +47,18 @@ class Fan:
         """Set the color of the fan."""
         self.__color = color
 
+    def is_on(self):
+        """Check if the fan is currently on."""
+        return self.__on
+
+    def turn_on(self):
+        """Turn the fan on."""
+        self.__on = True
+
+    def turn_off(self):
+        """Turn the fan off."""
+        self.__on = False
+
 # --- Test Program ---
 def main():
     CYAN, GREEN, YELLOW, RESET = '\033[96m', '\033[92m', '\033[93m', '\033[0m'
