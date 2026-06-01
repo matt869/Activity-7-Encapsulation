@@ -36,6 +36,14 @@ class Car:
         """Stop the car completely."""
         self.__speed = 0
 
+    def get_max_speed(self):
+        """Get the maximum speed of the car (200 mph limit)."""
+        return 200
+
+    def is_speeding(self):
+        """Check if the car is exceeding speed limit (80 mph)."""
+        return self.__speed > 80
+
 # --- Test Program ---
 def display_dashboard(action, speed):
     """Creates a visual speedometer bar."""
