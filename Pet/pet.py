@@ -42,6 +42,10 @@ class Pet:
         print(f"Pet Type       : {self.__animal_type}")
         print(f"Pet Age        : {self.__age} years old")
 
+    def is_adult(self):
+        """Check if the pet is an adult (age >= 2 years)."""
+        return self.__age >= 2
+
 # --- Test Program ---
     CYAN, GREEN, RESET = '\033[96m', '\033[92m', '\033[0m'
     print(f"{CYAN}=== Central Pet Registration System ==={RESET}\n")
