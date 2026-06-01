@@ -75,6 +75,14 @@ class Fan:
         status = "ON" if self.__on else "OFF"
         return f"Fan(color={self.__color}, speed={self.get_speed_label()}, radius={self.__radius}, power={status})"
 
+    def __str__(self):
+        """Return string representation of the fan."""
+        return self.get_fan_info()
+
+    def validate_speed(self, speed):
+        """Validate if speed is one of the allowed constants."""
+        return speed in [self.SLOW, self.MEDIUM, self.FAST]
+
 # --- Test Program ---
 def main():
     CYAN, GREEN, YELLOW, RESET = '\033[96m', '\033[92m', '\033[93m', '\033[0m'
