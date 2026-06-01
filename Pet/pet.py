@@ -50,6 +50,10 @@ class Pet:
         """Increment the pet's age by one year."""
         self.__age += 1
 
+    def validate_age(self, age):
+        """Validate if the provided age is reasonable (0-100)."""
+        return 0 <= age <= 100
+
 # --- Test Program ---
     CYAN, GREEN, RESET = '\033[96m', '\033[92m', '\033[0m'
     print(f"{CYAN}=== Central Pet Registration System ==={RESET}\n")
