@@ -28,6 +28,14 @@ class Car:
         """Return the year model of the car."""
         return self.__year_model
 
+    def is_moving(self):
+        """Check if the car is currently moving."""
+        return self.__speed > 0
+
+    def stop(self):
+        """Stop the car completely."""
+        self.__speed = 0
+
 # --- Test Program ---
 def display_dashboard(action, speed):
     """Creates a visual speedometer bar."""
