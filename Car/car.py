@@ -59,6 +59,22 @@ class Fan:
         """Turn the fan off."""
         self.__on = False
 
+    def get_speed_label(self):
+        """Get the speed label (SLOW, MEDIUM, or FAST)."""
+        if self.__speed == self.SLOW:
+            return "SLOW"
+        elif self.__speed == self.MEDIUM:
+            return "MEDIUM"
+        elif self.__speed == self.FAST:
+            return "FAST"
+        else:
+            return "UNKNOWN"
+
+    def get_fan_info(self):
+        """Get a formatted string with all fan information."""
+        status = "ON" if self.__on else "OFF"
+        return f"Fan(color={self.__color}, speed={self.get_speed_label()}, radius={self.__radius}, power={status})"
+
 # --- Test Program ---
 def main():
     CYAN, GREEN, YELLOW, RESET = '\033[96m', '\033[92m', '\033[93m', '\033[0m'
