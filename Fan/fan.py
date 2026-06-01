@@ -55,10 +55,13 @@ class Car:
 # --- Test Program ---
 def display_dashboard(action, speed):
     """Creates a visual speedometer bar."""
+    # Create speedometer bar based on speed
     bar = "█" * (speed // 2)
+    # Choose color based on action (green for accelerating, red for braking)
     color = '\033[92m' if action == "Accelerating" else '\033[91m'
     RESET = '\033[0m'
     print(f"[{color}{action:^12}{RESET}] Speed: {speed:3} mph |{color}{bar}{RESET}")
+    # Add delay for visual effect
     time.sleep(0.4)
 
 def main():
