@@ -55,6 +55,8 @@ class Pet:
         return 0 <= age <= 100
 
 # --- Test Program ---
+def main():
+    """Main program to test the Pet class functionality."""
     CYAN, GREEN, RESET = '\033[96m', '\033[92m', '\033[0m'
     print(f"{CYAN}=== Central Pet Registration System ==={RESET}\n")
     
