@@ -20,6 +20,14 @@ class Car:
         """Return the current speed of the car."""
         return self.__speed
 
+    def get_make(self):
+        """Return the make of the car."""
+        return self.__make
+
+    def get_year_model(self):
+        """Return the year model of the car."""
+        return self.__year_model
+
 # --- Test Program ---
 def display_dashboard(action, speed):
     """Creates a visual speedometer bar."""
