@@ -35,7 +35,14 @@ class Pet:
     def __str__(self):
         """Return a formatted string representation of the pet."""
         return f"Pet(name={self.__name}, type={self.__animal_type}, age={self.__age})"
-def main():
+
+    def display_info(self):
+        """Display all pet information in a formatted way."""
+        print(f"Pet Name       : {self.__name}")
+        print(f"Pet Type       : {self.__animal_type}")
+        print(f"Pet Age        : {self.__age} years old")
+
+# --- Test Program ---
     CYAN, GREEN, RESET = '\033[96m', '\033[92m', '\033[0m'
     print(f"{CYAN}=== Central Pet Registration System ==={RESET}\n")
     
