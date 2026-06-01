@@ -46,6 +46,10 @@ class Pet:
         """Check if the pet is an adult (age >= 2 years)."""
         return self.__age >= 2
 
+    def increment_age(self):
+        """Increment the pet's age by one year."""
+        self.__age += 1
+
 # --- Test Program ---
     CYAN, GREEN, RESET = '\033[96m', '\033[92m', '\033[0m'
     print(f"{CYAN}=== Central Pet Registration System ==={RESET}\n")
