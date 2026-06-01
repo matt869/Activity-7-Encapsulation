@@ -1,4 +1,5 @@
 class Fan:
+    """A class to represent a cooling fan with speed and color properties."""
     # Constants for fan speed
     SLOW = 1
     MEDIUM = 2
