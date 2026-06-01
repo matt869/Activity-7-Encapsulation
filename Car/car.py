@@ -6,6 +6,7 @@ class Fan:
     FAST = 3
 
     def __init__(self, speed=SLOW, radius=5.0, color="blue", on=False):
+        """Initialize a fan with speed, radius, color, and power state."""
         # Private data fields (Encapsulation via name mangling)
         self.__speed = speed
         self.__on = on
@@ -13,16 +14,38 @@ class Fan:
         self.__color = color
 
     # Accessors (Getters)
-    def get_speed(self): return self.__speed
-    def get_on(self): return self.__on
-    def get_radius(self): return self.__radius
-    def get_color(self): return self.__color
+    def get_speed(self): 
+        """Get the current speed of the fan."""
+        return self.__speed
+    
+    def get_on(self): 
+        """Get the power state of the fan."""
+        return self.__on
+    
+    def get_radius(self): 
+        """Get the radius of the fan."""
+        return self.__radius
+    
+    def get_color(self): 
+        """Get the color of the fan."""
+        return self.__color
 
     # Mutators (Setters)
-    def set_speed(self, speed): self.__speed = speed
-    def set_on(self, on): self.__on = on
-    def set_radius(self, radius): self.__radius = float(radius)
-    def set_color(self, color): self.__color = color
+    def set_speed(self, speed): 
+        """Set the speed of the fan."""
+        self.__speed = speed
+    
+    def set_on(self, on): 
+        """Set the power state of the fan."""
+        self.__on = on
+    
+    def set_radius(self, radius): 
+        """Set the radius of the fan."""
+        self.__radius = float(radius)
+    
+    def set_color(self, color): 
+        """Set the color of the fan."""
+        self.__color = color
 
 # --- Test Program ---
 def main():
