@@ -44,6 +44,14 @@ class Car:
         """Check if the car is exceeding speed limit (80 mph)."""
         return self.__speed > 80
 
+    def get_car_info(self):
+        """Return a formatted string with car information."""
+        return f"{self.__year_model} {self.__make} - Speed: {self.__speed} mph"
+
+    def __str__(self):
+        """Return string representation of the car."""
+        return self.get_car_info()
+
 # --- Test Program ---
 def display_dashboard(action, speed):
     """Creates a visual speedometer bar."""
