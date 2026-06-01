@@ -3,17 +3,21 @@ import time
 class Car:
     """A class to represent a vehicle with speed control functionality."""
     def __init__(self, year_model, make):
+        """Initialize car with year model and make."""
         self.__year_model = year_model
         self.__make = make
         self.__speed = 0
 
     def accelerate(self):
+        """Increase car speed by 5 mph."""
         self.__speed += 5
 
     def brake(self):
+        """Decrease car speed by 5 mph."""
         self.__speed -= 5
 
     def get_speed(self):
+        """Return the current speed of the car."""
         return self.__speed
 
 # --- Test Program ---
