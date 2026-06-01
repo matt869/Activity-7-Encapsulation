@@ -92,6 +92,11 @@ class Fan:
         if self.__speed < self.FAST:
             self.__speed += 1
 
+    def decrease_speed(self):
+        """Decrease fan speed by one level."""
+        if self.__speed > self.SLOW:
+            self.__speed -= 1
+
 # --- Test Program ---
 def main():
     CYAN, GREEN, YELLOW, RESET = '\033[96m', '\033[92m', '\033[93m', '\033[0m'
