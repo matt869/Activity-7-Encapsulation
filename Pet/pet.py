@@ -8,9 +8,17 @@ class Pet:
         self.__animal_type = ""
         self.__age = 0
 
-    def set_name(self, name): self.__name = name
-    def set_animal_type(self, animal_type): self.__animal_type = animal_type
-    def set_age(self, age): self.__age = age
+    def set_name(self, name): 
+        """Set the pet's name."""
+        self.__name = name
+    
+    def set_animal_type(self, animal_type): 
+        """Set the pet's animal type."""
+        self.__animal_type = animal_type
+    
+    def set_age(self, age): 
+        """Set the pet's age."""
+        self.__age = age
 
     def get_name(self): return self.__name
     def get_animal_type(self): return self.__animal_type
