@@ -65,6 +65,7 @@ def display_dashboard(action, speed):
     time.sleep(0.4)
 
 def main():
+    """Main program to simulate car acceleration and braking."""
     print("\033[96m--- Vehicle Telemetry Initiated ---\033[0m\n")
     my_car = Car(2025, "Porsche 911 GT3 RS")
     
