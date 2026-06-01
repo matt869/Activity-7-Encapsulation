@@ -1,0 +1,39 @@
+class Pet:
+    def __init__(self):
+        self.__name = ""
+        self.__animal_type = ""
+        self.__age = 0
+
+    def set_name(self, name): self.__name = name
+    def set_animal_type(self, animal_type): self.__animal_type = animal_type
+    def set_age(self, age): self.__age = age
+
+    def get_name(self): return self.__name
+    def get_animal_type(self): return self.__animal_type
+    def get_age(self): return self.__age
+
+# --- Test Program ---
+def main():
+    CYAN, GREEN, RESET = '\033[96m', '\033[92m', '\033[0m'
+    print(f"{CYAN}=== Central Pet Registration System ==={RESET}\n")
+    
+    my_pet = Pet()
+    
+    print("Please enter the following credentials:")
+    my_pet.set_name(input("  > Pet Name (e.g., Niko): "))
+    my_pet.set_animal_type(input("  > Animal Type (e.g., Dog, Cat, Bird): "))
+    
+    try:
+        my_pet.set_age(int(input("  > Age (in years): ")))
+    except ValueError:
+        print("\033[91m[Error] Age must be an integer. Defaulting to 0.\033[0m")
+        my_pet.set_age(0)
+        
+    print(f"\n{GREEN}--- Registration Successful ---{RESET}")
+    print(f"Registered Name: {my_pet.get_name()}")
+    print(f"Species / Type : {my_pet.get_animal_type()}")
+    print(f"Recorded Age   : {my_pet.get_age()} years old")
+    print("=======================================\n")
+
+if __name__ == "__main__":
+    main()
