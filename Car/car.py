@@ -99,17 +99,18 @@ class Fan:
 
 # --- Test Program ---
 def main():
+    """Main program to test Fan class functionality."""
     CYAN, GREEN, YELLOW, RESET = '\033[96m', '\033[92m', '\033[93m', '\033[0m'
     print(f"{CYAN}--- Cooling System Diagnostics ---{RESET}")
 
-    # First Object
+    # Create first fan object with custom settings
     fan1 = Fan()
     fan1.set_speed(Fan.FAST)
     fan1.set_radius(10)
     fan1.set_color("yellow")
     fan1.set_on(True)
 
-    # Second Object
+    # Create second fan object with different settings
     fan2 = Fan()
     fan2.set_speed(Fan.MEDIUM)
     fan2.set_radius(5)
